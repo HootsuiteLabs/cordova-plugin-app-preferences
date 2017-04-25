@@ -21,21 +21,7 @@
 	<hook type="before_plugin_install" src="bin/before_plugin_install.js" />
 
 	<hook type="after_prepare" src="bin/after_prepare.js" />
-	<hook type="after_plugin_install" src="bin/after_plugin_install.js" />
 	<hook type="before_plugin_uninstall" src="bin/before_plugin_uninstall.js" />
-
-	<!-- android -->
-	<platform name="android">
-		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="AppPreferences" >
-				<param name="android-package" value="me.apla.cordova.AppPreferences"/>
-			</feature>
-		</config-file>
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:name="me.apla.cordova.AppPreferencesActivity" />
-		</config-file>
-		<source-file src="src/android/AppPreferences.java" target-dir="src/me/apla/cordova" />
-	</platform>
 
 	<!-- ios -->
 	<platform name="ios">
